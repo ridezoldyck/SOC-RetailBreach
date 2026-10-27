@@ -1,0 +1,9 @@
+type,value,context,confidence,notes
+IP,111.224.180.128,Attacker source in lab PCAP,High,Lab-only indicator; validate before external use
+IP,73.124.17.52,Web server in lab PCAP,High,Destination/server address
+IP,135.143.142.5,Administrator host in lab PCAP,High,Source of relevant admin requests
+User-Agent,gobuster/3.6,Directory enumeration,High,Observed in HTTP Stream
+URI,/reviews.php,XSS-injected review page,High,POST request contains encoded script payload
+URI,/admin/log_viewer.php,Endpoint used in path traversal,High,Observed in attacker HTTP requests
+File path,/etc/passwd,Target of path traversal,High,Lab evidence shows traversal path targeting this file
+Session token,[REDACTED],Admin session cookie,High,Intentionally omitted from public repository
